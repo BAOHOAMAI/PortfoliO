@@ -14,9 +14,15 @@ html {
     overflow-x: hidden;
     /* overflow-y: scroll; */
     overscroll-behavior: none;
+    /* overflow: hidden; */
 }
+main {
+    width: 100%;
+    height: 100vh;
+}
+
 body::-webkit-scrollbar {
-    width:10px;
+    width:8px;
 }
 body::-webkit-scrollbar-thumb {
     background-color: rgb(55, 54, 54);
@@ -25,6 +31,7 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background-color: rgb(69, 66, 66);
 }
+
 .header {
     display: block;
     position: fixed;
@@ -69,6 +76,11 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .underline:hover::after {
     width: 100%;
+}
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
 }
 .header-about-container {
     position: absolute;
@@ -284,24 +296,19 @@ body::-webkit-scrollbar-thumb:hover {
     transform: translate(-50%, -50%);
     opacity: 1;
 }
-.slideWorks_visit:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+
 .white {
     background-color: rgba(255,255,255,.7);
 }
-.animated {
+/* .animated {
     animation-fill-mode: backwards;
-}
+} */
 .slideWorks_visit:hover::before  {
     transform: scaleX(0.9) scaleY(0.9);
     opacity: 0;
     background-color: black;
 }
-.slideWorks_visit:hover .white {
-    background-color:black;
-}
+
 .slideWorks_visit > span {
     position: absolute;
     top: 75px;
@@ -540,7 +547,7 @@ body::-webkit-scrollbar-thumb:hover {
     animation:menuTrigger_hoverY .5s cubic-bezier(.645,.045,.175,1) .15s
 }
 
-video {
+.mainVideo video {
     position: absolute;
     pointer-events: none;
     top: 0;
@@ -548,6 +555,7 @@ video {
     width: 100%;
     height: 100%;
     object-fit:cover;
+    z-index: 000;
 }
 /* LIST */
 .list {
@@ -633,6 +641,8 @@ video {
 }
 /*ABOUT */
 body {
+    height: 100vh;
+    /* position:absolute;   */
     width: 100%;
 }
 .about {
@@ -757,33 +767,54 @@ body {
     letter-spacing:.4em;
     background-color:#181a1b;
     color: white;
-    /* opacity:0; */    
+    overflow: hidden;
+    top: 0;
+    /* visibility:hidden; */
 }
 .loading_name{
     font-size:25px;
+    letter-spacing:.6em;
     font-weight:100;
     position:absolute;
     margin-bottom:60px;
+    position:absolute;
+    left: 42.5%;
 }
 .sub_loading {
     position:absolute;
     font-size:12px;
     font-weight:300;
     font-style: italic;
-    margin-top:60px;
+    margin-top:65px;
     margin-bottom:60px;
+    left:46.3%;
+    letter-spacing:.5em;
 }
 .loading_bar{
     position: absolute;
-    top: 55%;
+    width: 150px;
     height: 2px;
-    overflow: hidden;
-    margin-right: 3px;
     background-color: black;
+    top: 54%;
+    left: 48%;
+}
+.loader {
+    position: absolute;
+    height: 2px;
+    width: 150px;
+    background-color:white;
 }
 .done {
     top: 0;
     height: 100%;
     width: 100%;
     transition: all .5s ease-in-out;
+}
+.mainVideo {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
 }
