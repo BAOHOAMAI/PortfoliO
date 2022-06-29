@@ -6,7 +6,7 @@ tl
     .fromTo('.loader', { width:'0' }, { duration:1 , width:'100%' })
     .to('.loading>div', { opacity:0 , duration:1,
         onComplete: function(){
-            document.querySelector('.loading').remove();
+            document.querySelector('.loading').remove()
         }
     })
 // After loading home page
@@ -20,6 +20,8 @@ tl
     .fromTo ('video', { opacity:0 }, { opacity:1 },3.3)
 // After loading project page
     .fromTo('.slideWorks_container>div' ,{y:300} ,{ease: 'elastic.out(2,2)', y:0 , stagger:.2 , duration:2},3)
+    .fromTo('.slideWorks_visit', { opacity:0 , scale:0 }, { opacity:1 , scale:1 })
     .fromTo('.slideWorks_title' ,{y:300} ,{ease: 'elastic.out(2,2)', y:0 , duration:2 },3)
-    .fromTo('.slideWorks_visit', { opacity:0 , scale:0 , delay:.2 }, { opacity:1 , scale:1 })
-    .fromTo('.slideWorks_tech_icon>span>i', { opacity:0 , scale:0 , delay:.3}, {opacity:1 ,scale:1 , stagger:.1 })
+    .fromTo('.slideWorks_tech_icon>span>i', { opacity:0 , scale:0}, {opacity:1 ,scale:1 , stagger:.1 })
+
+      

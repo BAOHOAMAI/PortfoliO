@@ -41,7 +41,6 @@ const animationAboutEnter =  (container) => {
 
         return tl ;
 } ;
-
 // Barbajs
 
 barba.init({
@@ -50,7 +49,7 @@ barba.init({
 
     transitions: [
         {
-            name:'about',
+            name: 'about',
             to: {
                 namespace: ['about-section']
             },
@@ -59,12 +58,12 @@ barba.init({
             },
             enter({next}) {
                 animationAboutEnter(next.container);
-            }
+            },
         },
 
         {
             name: 'main',
-
+            
             once({next}) {
                 animationEnter(next.container);
                 TransitionEnter(next.container);
@@ -73,7 +72,6 @@ barba.init({
                 animationEnter(next.container);
                 TransitionEnter(next.container);
             },
-
         },
     ]
 });
