@@ -789,7 +789,7 @@ body {
     cursor: pointer;
 }
 .modal-close:hover {
-    color: red;
+    color: #760b00;
 }
 .modal-container {
     padding-top: 50px;
