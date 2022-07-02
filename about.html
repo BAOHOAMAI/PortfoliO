@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/portfolio.css">
     <link rel="stylesheet" href="./assets/css/base.css">
+    <script src="https://kit.fontawesome.com/cc570478f9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.typekit.net/iyd7qzu.css">
     <link rel="icon" href="../assets/image/48c652ef4ff4f573b3b5c8a0bddde45b.jpg" type="image/gif">
     <title>MAI BAOHOA |  About Me</title>
 </head>
 <body data-barba="wrapper" >  
     <div class="container"  data-barba="container" data-barba-namespace="about-section">
-       <div data-scroll-container>
+       <div data-scroll-container >
         <header>
             <div class="header slash">
                 <a class="header-home underline" href="index.html">
@@ -134,30 +135,121 @@
                 </h1>
                 <div class="about_from">
                     <p data-scroll-speed="2">from DANANG City</p>
-                    <a class="underline" data-scroll-speed="2" href="#">http://helloguys.to</a>
+                    <a class="underline" data-scroll-speed="2" href="#">m_baohoa@gmail.com</a>
                 </div>
                 <p class="about_description" data-scroll-speed="2">
                     A director and film maker with the Tokyo visual design studio Tangram.<br>
                     Characterized by a worldview that completely transforms casual everyday landscapes, expressed through the skillful use of light.
                 </p>
                 <div class="about_contact">
-                    <p data-scroll-speed="2">Contact</p>
-                    <a  data-scroll-speed="2"class="underline"  href="#">m_baohoa@gmail.com</a>
+                    <button  data-scroll-speed="2" class="underline js-contact"  href="#">Contact me</button>
                 </div>
             </div>
-        <footer  data-scroll-section>
-            <div class="backToTop">
-                <a href="#" class="arrow"  data-scroll-speed="1"></a>
+            <footer>
+                <div class="backToTop">
+                    <a href="#" class="arrow"  data-scroll-speed="1"></a>
+                </div>
+            </footer>
+            <div class="modal js-modal">
+                <div class="modal-close js-modal-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="modal-container">
+                    <div class="modal-title">
+                        <p class="title-1">Contact me</p>
+                        <p class="title-2">Do projects together ?</p>
+                    </div>
+                    <div class="modal-form">
+                        <div class="contact-form">
+                            <form>
+                                <div class="input-group">
+                                    <p>Score my projects</p>
+                                    <ul class="score-group">
+                                        <li class="score-element">
+                                            <input type="radio" id="Very Bad" name="score">
+                                            <label for="Very Bad">Very Bad</label>
+                                        </li>
+                                        <li class="score-element">
+                                            <input type="radio" id="Bad" name="score">
+                                            <label for="Bad">Bad</label>
+                                        </li>
+                                        <li class="score-element">
+                                            <input type="radio"  id="Good" name="score">
+                                            <label for="Good">Good</label>
+                                        </li>
+                                        <li class="score-element">
+                                            <input type="radio"  id="Sheeshh" name="score">
+                                            <label for="Sheeshh">Sheeshh !</label>
+                                        </li>
+                                        <span class="error-message">This field is required</span>
+                                    </ul>
+                                </div>
+                                <div class="input-group">
+                                    <p>Sex / Gender</p>
+                                    <ul class="sex-group">
+                                        <li class="sex-element">
+                                            <input type="radio" value="male" id="male" name="sex">
+                                            <label for="male">Male</label>
+                                        </li>
+                                        <li class="sex-element">
+                                            <input type="radio" value="female" id="female" name="sex">
+                                            <label for="female">Female</label>
+                                        </li>
+                                        <li class="sex-element">
+                                            <input type="radio" value="Other" id="Other" name="sex" >
+                                            <label for="Other">Other</label>
+                                        </li>
+                                        <span class="error-message">This field is required</span>
+                                    </ul>
+                                </div>
+                                <div class="input-text">
+                                    <div class="input-info">
+                                        <input type="text" placeholder="Your name">
+                                        <span class="error-message">This field is required</span>
+                                    </div>
+                                    <div class="input-info">
+                                        <input type="text" placeholder="Your email">
+                                        <span class="error-message">This field is required</span>
+                                    </div>
+                                </div>
+                                <div class="input-message">
+                                    <textarea name="Message" placeholder="Message" class="text-area"></textarea>
+                                </div>
+                                <div class="input-submit">
+                                    <p class="send red">Send request</p>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="social-info">
+                            <div class="text-wrap">
+                                <h5>Information :</h5>
+                                <p class="list-info">+84 92 111 6230</p>
+                                <p class="list-info">Duy Tan University</p>
+                                <p class="list-info">m_baohoa@gmail.com</p>
+                                <p class="list-info">Nui Thanh District , Da Nang City</p>
+                            </div>
+                            <div class="social-icon">
+                                <div class="social-list">
+                                    <a class="social-link" href="https://github.com/BAOHOAMAI"><i class="fa-brands fa-github-square"></i></a>
+                                    <a class="social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    <a class="social-link" href="https://www.linkedin.com/in/bao-hoa-mai-506b09220/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a class="social-link" href="https://www.facebook.com/baohoa.mai.18/"><i class="fa-brands fa-facebook-f"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
-        </footer>
-        </div>
     </div>
-    <script src="./js/locomotive-scroll.min.js"></script>
+    </div>
+    <!-- <script src="./js/locomotive-scroll.min.js"></script> -->
     <script>
-        const scroll = new LocomotiveScroll({
-            el: document.querySelector('[data-scroll-container]'),
-            smooth: true,
-      });
+
+    //     const scroll = new LocomotiveScroll({
+
+    //     el: document.querySelector('[data-scroll-container]'),
+    //     smooth: true,
+    // })
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
