@@ -32,10 +32,11 @@ function validator (options) {
     }
 
     var formElement = document.querySelector(options.form);
+
     if (formElement) {
 
         formElement.onsubmit = function (e) {
-            
+
             e.preventDefault();
 
             options.rules.forEach(function (rule) {
@@ -43,7 +44,15 @@ function validator (options) {
             validate (inputElement,rule);
             })
         }
-
+        // var radioElement = formElement.querySelectorAll('input[name="score"]');
+        
+        // for ( var i = 0; i < radioElement.length; i++) {
+        //     if (radioElement[i].checked == true) {
+        //         errorElement.innerHTML = '';
+        //     } else {
+        //         errorElement.innerHTML = errorMessage;
+        //     }
+        // }
         options.rules.forEach(function (rule) {
 
             if (Array.isArray(selectorRules[rule.selector])) {
@@ -65,7 +74,6 @@ function validator (options) {
                 }
             }
         })
-        console.log(selectorRules);
     }
 }
  

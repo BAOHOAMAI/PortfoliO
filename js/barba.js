@@ -3,8 +3,8 @@ const tl = gsap.timeline();
 tl
     .fromTo('.sub_loading', { y:-30 , opacity:0 }, { duration:.7 , opacity:1 , y:0 , ease:'easeInOut' })
     .fromTo('.loading_bar', { opacity:0 }, { opacity:1 })
-    .fromTo('.loader', { width:'0' }, { duration:1 , width:'100%' })
-    .to('.loading>div', { opacity:0 , duration:1,
+    .fromTo('.loader', { width:'0' }, { duration:1.3 , width:'100%' })
+    .to('.loading>div', { opacity:0 , duration:1.3,
         onComplete: function(){
             document.querySelector('.loading').remove()
         }
@@ -68,6 +68,7 @@ const animationAboutEnter =  (container) => {
             .fromTo('.title-2', { x:200 , opacity:0 }, { duration:1 , x:0 , opacity:1 , ease: 'Expo.easeInOut' },0)
     }
     
+    
     function hideContactForm() {
         modal.classList.remove('open');
     }
@@ -100,7 +101,7 @@ barba.init({
             once({next}) {
                 animationAboutEnter(next.container);
             },
-            enter({next,current}) {
+            enter({next}) {
                 animationAboutEnter(next.container);
             },
         },
