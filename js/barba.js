@@ -103,9 +103,6 @@ barba.init({
             enter({next,current}) {
                 animationAboutEnter(next.container);
             },
-            // afterLeave({current, next}) {
-            //     scroll.destroy();
-            // },
         },
         
         {
