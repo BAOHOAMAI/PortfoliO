@@ -7,6 +7,7 @@ textarea.addEventListener('keyup',e => {
     let scHeight = e.target.scrollHeight;
     textarea.style.height = `${scHeight}px`;
 }) 
+
 // Validation form
 
 function validator (options) {
@@ -35,24 +36,16 @@ function validator (options) {
 
     if (formElement) {
 
-        formElement.onsubmit = function (e) {
+        // formElement.onsubmit = function (e) {
 
-            e.preventDefault();
+        //     e.preventDefault();
 
-            options.rules.forEach(function (rule) {
-            var inputElement = formElement.querySelector(rule.selector);
-            validate (inputElement,rule);
-            })
-        }
-        // var radioElement = formElement.querySelectorAll('input[name="score"]');
-        
-        // for ( var i = 0; i < radioElement.length; i++) {
-        //     if (radioElement[i].checked == true) {
-        //         errorElement.innerHTML = '';
-        //     } else {
-        //         errorElement.innerHTML = errorMessage;
-        //     }
+        //     options.rules.forEach(function (rule) {
+        //     var inputElement = formElement.querySelector(rule.selector);
+        //     validate (inputElement,rule);
+        //     })  
         // }
+
         options.rules.forEach(function (rule) {
 
             if (Array.isArray(selectorRules[rule.selector])) {

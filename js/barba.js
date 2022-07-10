@@ -3,8 +3,8 @@ const tl = gsap.timeline();
 tl
     .fromTo('.sub_loading', { y:-30 , opacity:0 }, { duration:.7 , opacity:1 , y:0 , ease:'easeInOut' })
     .fromTo('.loading_bar', { opacity:0 }, { opacity:1 })
-    .fromTo('.loader', { width:'0' }, { duration:1.3 , width:'100%' })
-    .to('.loading>div', { opacity:0 , duration:1.3,
+    .fromTo('.loader', { width:'0' }, { duration:1 , width:'100%' })
+    .to('.loading>div', { opacity:0 , duration:1,
         onComplete: function(){
             document.querySelector('.loading').remove()
         }
@@ -29,7 +29,7 @@ tl
 const TransitionEnter = (container) => {
     const tl = gsap.timeline();
 
-    tl.from (container, { autoAlpha:0 , duration:.6 , x:-2000 , opacity:0 })
+    tl.from (container, { autoAlpha:0 , duration:.6 , translateX: '100%' , opacity:0 })
       .fromTo('.slideNavi-next', { x:-200 , opacity:0 }, { duration:1 , delay:.3 , x:0 , opacity:1 , ease: 'Expo.easeInOut' } ,0)
       .fromTo('.slideNavi-prev', { x:200 , opacity:0 }, { duration:1 , delay:.3 , x:0 , opacity:1 , ease: 'Expo.easeInOut' },0)
 
@@ -51,30 +51,10 @@ const animationEnter = (container) => {
 
 // Enter About Section 
 
-const animationAboutEnter =  (container) => {
+const animationAboutEnter = (container) => {
     const images = container.querySelectorAll('.list_thumb');
     const aboutNums= container.querySelectorAll('.list_num');
     const abouTitles = container.querySelectorAll('.list_title');
-    // Contact Form
-    const contactBtn = document.querySelector('.js-contact');
-    const modal = document.querySelector('.js-modal');
-    const modalClose = document.querySelector('.js-modal-close');
-
-    function showContactForm() {
-        modal.classList.add('open');
-        const tl = gsap.timeline();
-        tl 
-            .fromTo('.title-1', { x:-200 , opacity:0 }, { duration:1 , x:0 , opacity:1 , ease: 'Expo.easeInOut' },0)
-            .fromTo('.title-2', { x:200 , opacity:0 }, { duration:1 , x:0 , opacity:1 , ease: 'Expo.easeInOut' },0)
-    }
-    
-    
-    function hideContactForm() {
-        modal.classList.remove('open');
-    }
-
-    modalClose.addEventListener('click',hideContactForm);
-    contactBtn.addEventListener('click',showContactForm);
 
     const tl = gsap.timeline();
             tl
@@ -86,6 +66,33 @@ const animationAboutEnter =  (container) => {
 
         return tl ;
 } ;
+
+// Contact Form
+
+const formAnimation = () => {
+
+        const contactBtn = document.querySelector('.js-contact');
+        const modal = document.querySelector('.js-modal');
+        const modalClose = document.querySelector('.js-modal-close');
+    
+        function showContactForm() {
+            modal.classList.add('open');
+            const tl = gsap.timeline();
+            tl 
+                .fromTo('.title-1', { x:-200 , opacity:0 }, { duration:1 , x:0 , opacity:1 , ease: 'Expo.easeInOut' },0)
+                .fromTo('.title-2', { x:200 , opacity:0 }, { duration:1 , x:0 , opacity:1 , ease: 'Expo.easeInOut' },0)
+        }
+        
+        
+        function hideContactForm() {
+            modal.classList.remove('open');
+        }
+    
+        modalClose.addEventListener('click',hideContactForm);
+        contactBtn.addEventListener('click',showContactForm);
+
+}
+
 // Barbajs
 
 barba.init({
@@ -100,9 +107,11 @@ barba.init({
             },
             once({next}) {
                 animationAboutEnter(next.container);
+                formAnimation(next.container);
             },
             enter({next}) {
                 animationAboutEnter(next.container);
+                formAnimation();
             },
         },
         
@@ -117,6 +126,9 @@ barba.init({
                 animationEnter(next.container);
                 TransitionEnter(next.container);
             },
+            leave(data) {
+                data.current.container.remove();
+            }
         },
     ]
 });

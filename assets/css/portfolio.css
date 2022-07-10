@@ -669,13 +669,13 @@ body {
     display: block;
     font-size: 28px;
     font-weight: 600;
-    letter-spacing: 25px;
+    letter-spacing: 23.5px;
 }
 .about_name {
     display: block;
     margin-top: 20px;
     font-size: 60px;
-    letter-spacing: 85px;
+    letter-spacing: 70px;
     white-space: nowrap;
     font-weight: 500;
 }
