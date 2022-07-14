@@ -1,12 +1,4 @@
 
-// Textarea Contact Form
-const textarea = document.querySelector('textarea');
-
-textarea.addEventListener('keyup',e => {
-    textarea.style.height = '76px';
-    let scHeight = e.target.scrollHeight;
-    textarea.style.height = `${scHeight}px`;
-}) 
 
 // Validation form
 
@@ -30,21 +22,29 @@ function validator (options) {
             errorElement.innerHTML = '';
             inputElement.classList.remove('invalid');
         }
+        return !errorMessage;
     }
 
     var formElement = document.querySelector(options.form);
 
     if (formElement) {
 
-        // formElement.onsubmit = function (e) {
+        formElement.onsubmit = function (e) {
+            e.preventDefault(); 
 
-        //     e.preventDefault();
-
-        //     options.rules.forEach(function (rule) {
-        //     var inputElement = formElement.querySelector(rule.selector);
-        //     validate (inputElement,rule);
-        //     })  
-        // }
+            var isFormValid = true;
+            options.rules.forEach(function (rule) {
+                var inputElement = formElement.querySelector(rule.selector);
+                var isValid =validate (inputElement,rule);
+                
+                if(!isValid) {
+                    isFormValid = false;
+                }
+            });
+            if (isFormValid) {
+                showSuccessMessage();
+            } 
+        }
 
         options.rules.forEach(function (rule) {
 
@@ -69,7 +69,16 @@ function validator (options) {
         })
     }
 }
- 
+var success = document.querySelector('.popup');
+function showSuccessMessage () {
+    success.classList.add('active');
+}
+function removeMessage () {
+    success.classList.remove('active');
+}
+const closeMessage = document.querySelector('.message-close');
+closeMessage.addEventListener('click',removeMessage);
+
 validator.isRequired = function(selector) {
     return {
         selector: selector,

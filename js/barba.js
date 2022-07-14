@@ -91,6 +91,15 @@ const formAnimation = () => {
         modalClose.addEventListener('click',hideContactForm);
         contactBtn.addEventListener('click',showContactForm);
 
+        // Textarea Contact Form
+
+        const textarea = document.querySelector('textarea');
+
+        textarea.addEventListener('keyup',e => {
+        textarea.style.height = '76px';
+        let scHeight = e.target.scrollHeight;
+        textarea.style.height = `${scHeight}px`;
+        }) 
 }
 
 // Barbajs
@@ -107,7 +116,7 @@ barba.init({
             },
             once({next}) {
                 animationAboutEnter(next.container);
-                formAnimation(next.container);
+                formAnimation();
             },
             enter({next}) {
                 animationAboutEnter(next.container);

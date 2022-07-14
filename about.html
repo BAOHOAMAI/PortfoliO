@@ -11,7 +11,7 @@
     <title>MAI BAOHOA |  About Me</title>
 </head>
 <body data-barba="wrapper">
-        <div class="container"  data-barba="container" data-barba-namespace="about-section">
+        <div class="container" data-barba="container" data-barba-namespace="about-section">
             <header>
                 <div class="header slash">
                     <a class="header-home underline" href="index.html">
@@ -133,7 +133,6 @@
                     </h1>
                     <div class="about_from">
                         <p>from DANANG City</p>
-                        <!-- <a class="underline" href="#">m_baohoa@gmail.com</a> -->
                     </div>
                     <p class="about_description">
                         Passionate about building ideas , good analytical skills that lead to find out newer ideas from existing systems and data . <br>
@@ -159,7 +158,7 @@
                         </div>
                         <div class="modal-form">
                             <div class="contact-form">
-                                <form  class="form" id="form-1" onsubmit="sendEmail(); reset(); return false;">
+                                <form class="form" id="form-1" method="GET" action="/">
                                     <div class="input-group">
                                         <p>Score my projects</p>
                                         <ul class="score-group" id="score-group">
@@ -219,6 +218,14 @@
                                     </div>
                                 </form>
                             </div>
+                            <div class="popup">
+                                <h3>Thank you !</h3>
+                                <p class="message">Hope to work with you in the future and have a good day. </p>
+                                <p class="from">from Bao Hoa</p>
+                                <div class="message-close">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                            </div>
                             <div class="social-info">
                                 <div class="text-wrap">
                                     <h5>Information :</h5>
@@ -243,34 +250,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="./js/gsap.js"></script>
     <script src="./js/barba.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
         validator ({
           form : '#form-1',
           rules : [
             validator.isRequired('#your_name'),
-            validator.isRequired('#score-group'),
-            validator.isRequired('#sex-group'),
+            // validator.isRequired('#score-group'),
+            // validator.isRequired('#sex-group'),
             validator.isRequired('#your_email'),
             validator.isEmail('#your_email'),
             validator.isRequired('#text-area'),
             // validator.isRequired('input[name="score"]'),
         ],
         })
-
-        function sendEmail() {
-            Email.send({
-                Host : "smtp.gmail.com",
-                SecureToken : '880ece7e-ea76-4ed5-9dd8-8b0fc7a7cd8a',
-                To : 'baohoa17112001@gmail.com',
-                From : document.getElementById('your_email').value,
-                Subject : "Request do projects",
-                Body : "Score : ",
-            }).then(
-            message => alert('message')
-            );
-             }
-             
-        </script>
+    </script>
 </body>
 </html>
