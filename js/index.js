@@ -25,11 +25,12 @@ tl
     .fromTo('.slideWorks_tech_icon>span>i', { opacity:0 , scale:0}, {opacity:1 ,scale:1 , stagger:.1 })
 
 // AnimationEnter page 
-
+const nextBtn = document.querySelector('.slideNavi-next');
+const prevBtn = document.querySelector('.slideNavi-prev');
 const TransitionEnter = (container) => {
     const tl = gsap.timeline();
 
-    tl.from (container, { autoAlpha:0 , duration:.6 , translateX: '100%' , opacity:0 })
+    tl.from (container, { autoAlpha:0 , duration:.6 , translateX: '-100%' , opacity:0 })
       .fromTo('.slideNavi-next', { x:-200 , opacity:0 }, { duration:1 , delay:.3 , x:0 , opacity:1 , ease: 'Expo.easeInOut' } ,0)
       .fromTo('.slideNavi-prev', { x:200 , opacity:0 }, { duration:1 , delay:.3 , x:0 , opacity:1 , ease: 'Expo.easeInOut' },0)
 
@@ -171,6 +172,7 @@ function validator (options) {
             }
         })
     }
+    // Thank you message
     var success = document.querySelector('.popup');
     function showSuccessMessage () {
         success.classList.add('active');

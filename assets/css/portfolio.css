@@ -12,9 +12,7 @@ html {
     height: auto;
     background-color: #181a1b;
     overflow-x: hidden;
-    /* overflow-y: scroll; */
     overscroll-behavior: none;
-    /* overflow: hidden; */
     scroll-behavior: smooth;
 }
 
@@ -627,7 +625,6 @@ body::-webkit-scrollbar-thumb:hover {
     display: block;
     width: 100%;
     height: auto;
-    transition: 1s;
     object-fit:cover;
     border:none;
     outline: none;
@@ -923,6 +920,7 @@ body {
     line-height: 5px;
     outline: none;
     letter-spacing:2px;
+    z-index: 3;
 
 }
 .input-message {
@@ -1060,9 +1058,8 @@ textarea::-webkit-scrollbar {
     top: 37%;
     left: 36%;
     border-radius: 6px;
-    z-index: 100;
     color: #fff;
-    visibility:hidden;
+    opacity: 0;
 }
 .popup .message {
     padding-top:30px;
@@ -1103,8 +1100,20 @@ textarea::-webkit-scrollbar {
 .popup i:hover {
     color: #760b00;
 }
-.active {
-    visibility:unset;
+.popup.active {
+    opacity: 1;
+    z-index: 4;
+    animation: scaleMessage .4s ease-in-out;
+}
+@keyframes scaleMessage {
+    from { 
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+         opacity: 1;
+         transform: scale(1);
+    }
 }
 /* Loading */
 .loading{
@@ -1156,3 +1165,4 @@ textarea::-webkit-scrollbar {
     width: 150px;
     background-color:white;
 }
+
