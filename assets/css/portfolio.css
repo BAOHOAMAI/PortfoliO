@@ -296,9 +296,7 @@ body::-webkit-scrollbar-thumb:hover {
 .white {
     background-color: rgba(255,255,255,.7);
 }
-/* .animated {
-    animation-fill-mode: backwards;
-} */
+
 .slideWorks_visit:hover::before  {
     transform: scaleX(0.9) scaleY(0.9);
     opacity: 0;
@@ -315,6 +313,7 @@ body::-webkit-scrollbar-thumb:hover {
     right: 43px;
 
 }
+
 .slideWorks_visit:before {
     content: "";
     display: block;
