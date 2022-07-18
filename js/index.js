@@ -11,8 +11,8 @@ tl
     })
 // After loading home page
     .fromTo('.menuTrigger_open>span', { scale:0 , opacity:0 }, { scale:1, opacity:1 , stagger:.1 , duration:1 },3.2)
-    .fromTo('.header-home', { x:-40 , opacity:0 }, { x:0, opacity:1 , duration:.5 },4.2)
-    .fromTo('.header-about-container>span', { x:-40 , opacity:0 }, { x:0, opacity:1 , stagger:.1 , duration:.5 },4.3)
+    .fromTo('.header-home', { x:-40 , opacity:0 }, { x:0, opacity:1 , duration:.7 },4.3)
+    .fromTo('.header-about-container>span', { x:-40 , opacity:0 }, { x:0, opacity:1 , stagger:.1 , duration:.7 },4.4)
     .fromTo('.contact>a', { x:-40 , opacity:0 }, { x:0, opacity:1 , stagger:.1 , duration:.5 },4.4)
     .fromTo('.slideNavi-next', { x:-200 , opacity:0 }, { duration:1 , x:0 , opacity:1 , ease: 'Expo.easeInOut' } ,3.2)
     .fromTo('.slideNavi-prev', { x:200 , opacity:0 }, { duration:1 , x:0 , opacity:1 , ease: 'Expo.easeInOut' },3.2)
