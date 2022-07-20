@@ -9,9 +9,16 @@
     .contact {
         display: none;
     }
+    .header {
+        top: 15px;
+        left: auto;
+        right: 15px;
+
+    }
     .header-about-container {
-        top: -17px;
-        left: 250px;
+        top: 0;
+        left: auto;
+        right: 0;
         font-size: 12px;
     }
     .header-about-narrow {
@@ -113,22 +120,5 @@
 
 /* Tablet */
 @media (min-width:46.25em) and (max-width:63.9375em) {
-    /* .header-about-container {
-        top: -17px;
-        left: 250px;
-        width: 97px;
-        margin-top: 8px;
-        font-size: 12px;
-        letter-spacing: .2em;
-        font-weight: 600;
-    }
-    .header-about-narrow {
-        fill: white;
-        width: 23px;
-        height: 7px;
-        right: 11px;
-    }
-    .header-about-narrow>svg {  
-        transform: none;
-    } */
+
 }
