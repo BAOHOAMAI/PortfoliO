@@ -1140,7 +1140,6 @@ textarea::-webkit-scrollbar {
     font-weight:100;
     position:absolute;
     margin-bottom:60px;
-    position:absolute;
     left: 42.5%;
 }
 .sub_loading {
