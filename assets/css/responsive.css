@@ -1,11 +1,114 @@
 /* Moblie */
-@media only screen and (max-width:46.1875em) {
+@media (max-width:46.1875em) {
     .header-home {
         display: none;
+    }
+    .slash::before {
+        display: none;
+    }
+    .contact {
+        display: none;
+    }
+    .header-about-container {
+        top: -17px;
+        left: 250px;
+        font-size: 12px;
+    }
+    .header-about-narrow {
+        fill: white;
+        width: 23px;
+        height: 7px;
+        right: 11px;
+    }
+    .header-about-narrow>svg {  
+        transform: none;
+    }
+    .menuTrigger_open>span{
+        height:2px;
+    }
+    .menuTrigger {
+        top: 13px;
+        left: 15px;
+        margin-top: 0;
+        width: 23px;
+        height: 23px;
+    }
+    .header-about-text {
+        margin-left: 16px;
+    }
+    .menuTrigger_open>span:nth-child(1){
+        top:2px;
+    }
+    .menuTrigger_open>span:nth-child(2){
+        top:10px;
+    }
+    .menuTrigger_open>span:nth-child(3){
+        top:18px;
+    }
+    .slideHome-container {
+        width: 350px;
+    }
+    .slideHome-position {
+        font-size: 15px;
+        text-align: center;
+        letter-spacing: 6px;
+    }
+    .slideHome-name {
+        font-size: 31px;
+        text-align: center;
+        letter-spacing: 25px;
+        line-height:1.75;
+    }
+    .slideHome-from>br , .slideHome-name>br {
+        display: block;
+    }
+    .slideHome-from {
+        margin-top: 12px;
+        text-align: center;
+        font-size: 13px;
+        letter-spacing: 5px;
+        line-height: 1.7;
+    }
+    .slideNavi {
+        bottom: 25px;
+        width: 250px;
+        margin-left: -125px;
+        font-size: 14px;
+    }
+    .slideNavi-title {
+        display: none;
+    }
+    .slideNavi-arrow>span>svg {
+        height: 10px;
+    }
+    .slideNavi-prev , .slideNavi-next {
+        width: 100px;
+    }
+    .slideNavi-num {
+        position: relative;
+        top: 0;
+        font-size: 13px;
     }
 }
 
 /* Tablet */
-@media only screen and (min-width:46.25em) and (max-width:63.9375em) {
-    
+@media (min-width:46.25em) and (max-width:63.9375em) {
+    /* .header-about-container {
+        top: -17px;
+        left: 250px;
+        width: 97px;
+        margin-top: 8px;
+        font-size: 12px;
+        letter-spacing: .2em;
+        font-weight: 600;
+    }
+    .header-about-narrow {
+        fill: white;
+        width: 23px;
+        height: 7px;
+        right: 11px;
+    }
+    .header-about-narrow>svg {  
+        transform: none;
+    } */
 }

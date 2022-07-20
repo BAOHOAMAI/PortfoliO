@@ -180,6 +180,9 @@ body::-webkit-scrollbar-thumb:hover {
     letter-spacing: .25em;
     font-weight: 300;
 }
+.slideHome-from>br , .slideHome-name>br {
+    display: none;
+}
 /* Slide Work */
 .slideWorks {
     position: absolute;
