@@ -136,7 +136,7 @@
         font-size:16px;
     }
     .slideWorks_category {
-        top: -2px;
+        top: 0;
         font-size:16px;
         left: 72px;
     }
@@ -175,6 +175,17 @@
     }
     .slideWorks_visit > span {
         font-size: 16px;
+        top: 45px;
+        left:23px;
+    }
+    .slideWorks_visit:after {
+        top: 48.5px;
+        right: -3px;
+        width: 13px;
+        height: 13px;
+    }
+    .slideWorks_tech, .slideWorks_description {
+        display: none;
     }
 }
 
