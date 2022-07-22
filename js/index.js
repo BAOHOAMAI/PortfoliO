@@ -38,6 +38,7 @@ const TransitionEnter = (container) => {
 };
 
 const animationEnter = (container) => {
+
     const tl = gsap.timeline();
 
     tl.fromTo('.slideWorks_title', { x:-200 , opacity: 0 }, { opacity:1 , x:0},.4)
@@ -103,6 +104,26 @@ const formAnimation = () => {
         }) 
 }
 
+const infoForm = () => {
+    const openInfoBtn = document.querySelector('.slideWorks_info');
+    const closeInfoBtn = document.querySelector('.slideInfo_back');
+    const infoModal = document.querySelector('.slideInfo');
+    const infoBackground = document.querySelector('.slideInfo::before');
+    function openInfoModal() {
+        infoModal.classList.add('active')
+        const tl = gsap.timeline();
+        tl 
+            .fromTo(infoModal, { x:200, opacity:0 }, {duration:1, x:0 , opacity:1 , ease: 'Expo.easeInOut' },0)
+            // .fromTo('.title-2', { x:200 , opacity:0 }, { duration:1 , x:0 , opacity:1 , ease: 'Expo.easeInOut' },0)
+    }
+
+    function closeInfoModal() {
+        infoModal.classList.remove('active')
+    }
+
+    openInfoBtn.addEventListener('click', openInfoModal)
+    closeInfoBtn.addEventListener('click', closeInfoModal) 
+}
 
 // Validation form
 
@@ -244,12 +265,32 @@ barba.init({
         
         {
             name: 'main',
-            
+            to: {
+                namespace: ['home-section']
+            },
             once({next}) {
                 animationEnter(next.container);
                 TransitionEnter(next.container);
             },
             enter({next}) {
+                animationEnter(next.container);
+                TransitionEnter(next.container);
+            },
+            leave(data) {
+                data.current.container.remove();
+            }
+        },
+
+        {
+            name: 'projects',
+            
+            once({next}) {
+                infoForm();
+                animationEnter(next.container);
+                TransitionEnter(next.container);
+            },
+            enter({next}) {
+                infoForm();
                 animationEnter(next.container);
                 TransitionEnter(next.container);
             },
