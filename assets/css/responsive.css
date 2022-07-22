@@ -13,7 +13,6 @@
         top: 15px;
         left: auto;
         right: 15px;
-
     }
     .header-about-container {
         top: 0;
@@ -131,6 +130,7 @@
         padding-top: 85px;
         padding-left: 25px;
         padding-right: 25px;
+        /* height: 100%; */
     }
     .slideWorks_num {
         font-size:16px;
@@ -146,6 +146,7 @@
         height: 23px;
     }
     .slideWorks_title {
+        width: 100%;
         font-size:28px;
     }
     .slideWorks_info {
