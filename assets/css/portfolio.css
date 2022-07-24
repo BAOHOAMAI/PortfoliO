@@ -12,7 +12,7 @@ html {
     height: auto;
     background-color: #181a1b;
     overflow-x: hidden;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     overscroll-behavior: none;
     scroll-behavior: smooth;
 }
@@ -753,9 +753,7 @@ body::-webkit-scrollbar-thumb:hover {
 /*ABOUT */
 body {
     min-height: 100vh;
-    /* position:absolute;   */
     width: 100%;
-    /* overflow: :hidden; */
 }
 .about {
     margin-left: auto;
