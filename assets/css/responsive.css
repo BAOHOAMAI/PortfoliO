@@ -227,6 +227,7 @@
         padding-left:28px;
         padding-right:28px;
         padding-top:40px;
+        width: 100%;
     }
     .about_position {
         font-size:13px;
@@ -234,7 +235,7 @@
     }
     .about_name {
         font-size:31px;
-        letter-spacing:24px;
+        letter-spacing:13px;
         margin-top:16px;
     }
     .about_from {
@@ -245,7 +246,10 @@
         margin-top:32px;
         font-size:14px;
         line-height:1.6;
-        letter-spacing:2px;
+        letter-spacing:3px;
+    }
+    .about_contact {
+        display: none;
     }
 }
 
