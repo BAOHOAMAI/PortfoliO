@@ -9,7 +9,9 @@ tl
             document.querySelector('.loading').remove()
         }
     })
+
 // After loading home page
+
     .fromTo('.menuTrigger_open>span', { scale:0 , opacity:0 }, { scale:1, opacity:1 , stagger:.1 , duration:1 },3.2)
     .fromTo('.header-home', { x:-40 , opacity:0 }, { x:0, opacity:1 , duration:.7 },4.3)
     .fromTo('.header-about-container>span', { x:-40 , opacity:0 }, { x:0, opacity:1 , stagger:.1 , duration:.7 },4.4)
@@ -18,13 +20,16 @@ tl
     .fromTo('.slideNavi-prev', { x:200 , opacity:0 }, { duration:1 , x:0 , opacity:1 , ease: 'Expo.easeInOut' },3.2)
     .fromTo ('.slideHome-container>span' , {y: 100 , opacity:0 } ,{ duration: 1.5 , y:0 , opacity:1 ,stagger:.2 , ease:'Expo.easeInOut' },3)
     .fromTo ('video', { opacity:0 }, { opacity:1 },3.3)
+
 // After loading project page
+
     .fromTo('.slideWorks_container>div' ,{y:300} ,{ease: 'elastic.out(2,2)', y:0 , stagger:.2 , duration:2},3)
     .fromTo('.slideWorks_visit', { opacity:0 , scale:0 }, { opacity:1 , scale:1 })
     .fromTo('.slideWorks_title' ,{y:300} ,{ease: 'elastic.out(2,2)', y:0 , duration:2 },3)
     .fromTo('.slideWorks_tech_icon>span>i', { opacity:0 , scale:0}, {opacity:1 ,scale:1 , stagger:.1 })
 
 // AnimationEnter page 
+
 const nextBtn = document.querySelector('.slideNavi-next');
 const prevBtn = document.querySelector('.slideNavi-prev');
 const TransitionEnter = (container) => {
@@ -104,6 +109,8 @@ const formAnimation = () => {
         }) 
 }
 
+// Info Form
+
 const infoForm = () => {
     const openInfoBtn = document.querySelector('.slideWorks_info');
     const closeInfoBtn = document.querySelector('.slideInfo_back');
@@ -113,11 +120,14 @@ const infoForm = () => {
         infoModal.classList.add('active')
         const tl = gsap.timeline();
         tl 
-            .fromTo(infoModal, { x:200, opacity:0 }, {duration:1, x:0 , opacity:1 , ease: 'Expo.easeInOut' },0)
+        .from (infoModal, { autoAlpha:0 , duration:.6 , translateX: '-100%' , opacity:0 })
             // .fromTo('.title-2', { x:200 , opacity:0 }, { duration:1 , x:0 , opacity:1 , ease: 'Expo.easeInOut' },0)
     }
 
     function closeInfoModal() {
+        const tl = gsap.timeline();
+        tl 
+        .to (infoModal, { autoAlpha:0 , duration:1 , translateX: '0%' , opacity:0 })
         infoModal.classList.remove('active')
     }
 
@@ -193,7 +203,9 @@ function validator (options) {
             }
         })
     }
+
     // Thank you message
+    
     var success = document.querySelector('.popup');
     function showSuccessMessage () {
         success.classList.add('active');

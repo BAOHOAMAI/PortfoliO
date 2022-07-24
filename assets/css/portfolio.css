@@ -12,6 +12,7 @@ html {
     height: auto;
     background-color: #181a1b;
     overflow-x: hidden;
+    overflow-y: scroll;
     overscroll-behavior: none;
     scroll-behavior: smooth;
 }
