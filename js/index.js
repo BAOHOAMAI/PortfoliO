@@ -25,7 +25,8 @@ tl
 
     .fromTo('.slideWorks_container>div' ,{y:300} ,{ease:'elastic.out(2,2)', y:0 , stagger:.2 , duration:2},3)
     .fromTo('.slideWorks_visit', { opacity:0 , scale:0 }, { opacity:1 , scale:1 })
-    .fromTo('.slideWorks_title' ,{y:300} ,{ease: 'elastic.out(2,2)', y:0 , duration:2 },3)
+    .fromTo('.slideWorks_title' ,{y:300} ,{ease: 'elastic.out(2,2)', y:0 , duration:2.3 },3)
+    .fromTo('.slideWorks_info' ,{y:300} ,{ease: 'elastic.out(2,2)', y:0 , duration:2.5 },3)
     .fromTo('.slideWorks_tech_icon>span>i', { opacity:0 , scale:0}, {opacity:1 ,scale:1 , stagger:.1 })
 
 // AnimationEnter page 
