@@ -39,6 +39,17 @@
         width: 23px;
         height: 23px;
     }
+    .menuTrigger_close>span:nth-child(1) {
+        height: 2px;
+        top: 10px;
+    }
+    .menuTrigger_close>span:nth-child(2) {
+        width: 2px;
+        left: 10px;
+    }
+    .menuTrigger_close>span:before{
+        background-color: #fff;
+    }
     .header-about-text {
         margin-left: 16px;
     }
@@ -253,6 +264,51 @@
         letter-spacing:3px;
     }
     .about_contact {
+        display: none;
+    }
+    .about_sns {
+        margin-top: 32px;
+        position:relative;
+        font-size:13px;
+        letter-spacing:2px;
+        display: block;
+    }
+    .about_sns_fb, .about_sns_gh {
+        color:white;
+        text-decoration: none;
+    }
+    .about_sns_arrow {
+        position: absolute;
+        top: 0;
+        width: 24px;
+        left: 65px;
+    }
+    .about_sns_arrow>svg {
+        fill: #fff;
+    }
+    .about_sns_gh{
+        position: absolute;
+        top: 0;
+        left: 126px;
+    }
+    .about_sns_gh>.about_sns_arrow {
+        left: 50px;
+    }
+    .about_contact_email {
+        display: block;
+        margin-top: 32px;
+        font-size:13px;
+        letter-spacing:3px;
+    }
+    .about_contact_email_link {
+        text-decoration: none;
+        color: #fff;
+        letter-spacing:2px;
+        margin-top:5px;
+        display: inline-block;
+        margin-bottom:50px;
+    }
+    footer {
         display: none;
     }
 }

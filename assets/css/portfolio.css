@@ -755,6 +755,12 @@ body {
     min-height: 100vh;
     width: 100%;
 }
+.about_sns {
+    display: none;
+}
+.about_contact_email {
+    display: none;
+}
 .about {
     margin-left: auto;
     margin-right: auto;

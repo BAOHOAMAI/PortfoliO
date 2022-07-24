@@ -23,7 +23,7 @@ tl
 
 // After loading project page
 
-    .fromTo('.slideWorks_container>div' ,{y:300} ,{ease: 'elastic.out(2,2)', y:0 , stagger:.2 , duration:2},3)
+    .fromTo('.slideWorks_container>div' ,{y:300} ,{ease:'elastic.out(2,2)', y:0 , stagger:.2 , duration:2},3)
     .fromTo('.slideWorks_visit', { opacity:0 , scale:0 }, { opacity:1 , scale:1 })
     .fromTo('.slideWorks_title' ,{y:300} ,{ease: 'elastic.out(2,2)', y:0 , duration:2 },3)
     .fromTo('.slideWorks_tech_icon>span>i', { opacity:0 , scale:0}, {opacity:1 ,scale:1 , stagger:.1 })
@@ -121,13 +121,13 @@ const infoForm = () => {
         const tl = gsap.timeline();
         tl 
         .from (infoModal, { autoAlpha:0 , duration:.6 , translateX: '-100%' , opacity:0 })
-            // .fromTo('.title-2', { x:200 , opacity:0 }, { duration:1 , x:0 , opacity:1 , ease: 'Expo.easeInOut' },0)
+        .fromTo( '.slideInfo_container>div', {x:-300,opacity:0}, {x:0,stagger:.1,opacity:1},.1)
     }
 
     function closeInfoModal() {
-        const tl = gsap.timeline();
-        tl 
-        .to (infoModal, { autoAlpha:0 , duration:1 , translateX: '0%' , opacity:0 })
+        // const tl = gsap.timeline();
+        // tl 
+        // .to (infoModal, { autoAlpha:0 , duration:1 , translateX: '0%' , opacity:0 })
         infoModal.classList.remove('active')
     }
 
