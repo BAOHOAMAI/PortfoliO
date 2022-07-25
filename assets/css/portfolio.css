@@ -8,8 +8,8 @@ div {
     display: block;
 }   
 html {
-    width: 100%;
-    height: auto;
+    /* width: 100%;
+    height: auto; */
     background-color: #181a1b;
     overflow-x: hidden;
     /* overflow-y: scroll; */
@@ -752,8 +752,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 /*ABOUT */
 body {
-    min-height: 100vh;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
+    overflow: hidden;
 }
 .about_sns {
     display: none;
