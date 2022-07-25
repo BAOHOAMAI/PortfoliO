@@ -8,8 +8,8 @@ div {
     display: block;
 }   
 html {
-    /* width: 100%;
-    height: auto; */
+    width: 100%;
+    height: auto;
     background-color: #181a1b;
     overflow-x: hidden;
     /* overflow-y: scroll; */
@@ -137,7 +137,9 @@ body::-webkit-scrollbar-thumb:hover {
 .header a,.contact a {
     transition: color .5s linear .5s;
 }
-
+main {
+    display: block;
+}
 /* Slide */
 .slideHome {
     position: absolute;
@@ -752,9 +754,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 /*ABOUT */
 body {
-    /* height: 100%;
-    width: 100%; */
-    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    /* overflow: hidden; */
 }
 .about_sns {
     display: none;
