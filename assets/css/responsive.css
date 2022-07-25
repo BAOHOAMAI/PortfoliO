@@ -1,5 +1,8 @@
 /* Moblie */
 @media (max-width:46.1875em) {
+    html {
+        height: 100%;
+    }
     .header-home {
         display: none;
     }
