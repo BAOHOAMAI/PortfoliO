@@ -74,18 +74,20 @@
         top:18px;
     }
     .slideHome-container {
-        width: 350px;
+        width: 74vw;
     }
     .slideHome-position {
-        font-size: 15px;
+        font-size: 3.8vw;
         text-align: center;
-        letter-spacing: 6px;
+        letter-spacing: .34em;
+        margin-left: 4vw;
     }
     .slideHome-name {
-        font-size: 31px;
+        /* margin-top: 4vw; */
+        font-size: 8vw;
+        letter-spacing: .8em;
         text-align: center;
-        letter-spacing: 25px;
-        line-height:1.75;
+        line-height: 1.75;
     }
     .slideHome-from>br , .slideHome-name>br {
         display: block;
@@ -93,8 +95,8 @@
     .slideHome-from {
         margin-top: 12px;
         text-align: center;
-        font-size: 13px;
-        letter-spacing: 5px;
+        font-size: 3.2vw;
+        letter-spacing: .2em;
         line-height: 1.7;
     }
     .slideNavi {
@@ -149,32 +151,34 @@
     }
     .slideWorks_container {
         width: 100%;
-        padding-top: 85px;
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-top: 22vw;
+        padding-left: 6vw;
+        padding-right: 6vw;
         /* height: 100%; */
     }
     .slideWorks_num {
-        font-size:16px;
+        font-size:4vw;
     }
     .slideWorks_category {
-        font-size:16px;
-        left: 72px;
+        left: 15vw;
+        font-size: 4vw;
     }
     .slashes:before {
-        left: 56px;
-        top: -3px;
-        height: 23px;
+        top: -0.6vw;
+        left: 12.2vw;
+        height: 5.2vw;
     }
     .slideWorks_title {
         width: 100%;
-        font-size:28px;
+        margin-top: 2vw;
+        font-size: 7.5vw;
     }
     .slideWorks_info {
         display:inline-block;
-        margin-top:15px;
         position: relative;
         letter-spacing:2px;
+        margin-top: 3.5vw;
+        font-size: 4vw;
     }
     .slideWorks_info:before {
         content: "";
