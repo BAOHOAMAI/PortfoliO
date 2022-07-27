@@ -40,7 +40,6 @@ const TransitionEnter = (container) => {
     //   .fromTo('.slideNavi-next', { x:-200 , opacity:0 }, { duration:1 , delay:.3 , x:0 , opacity:1 , ease: 'Expo.easeInOut' } ,0)
     //   .fromTo('.slideNavi-prev', { x:200 , opacity:0 }, { duration:1 , delay:.3 , x:0 , opacity:1 , ease: 'Expo.easeInOut' },0)
 
-    return tl;
 };
 
 const animationEnter = (container) => {

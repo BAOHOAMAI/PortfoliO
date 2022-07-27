@@ -206,6 +206,7 @@ main {
 .slideWorks_container {
     position: relative;
     width: 900px;
+    max-width: 100%;
     min-height: 160px;
 }
 .slideWorks_header {
@@ -216,7 +217,7 @@ main {
 .slideWorks_num {
     font-size: 22px;
     letter-spacing: .1em;
-    position: relative;
+    /* position: relative; */
 }
 .slashes:before {
     content: "";
