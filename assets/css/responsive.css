@@ -212,19 +212,18 @@
 
     /* List */
     .list {
-        margin-top:80px;
-        padding-left: 28px;
-        padding-right: 28px;
-        box-sizing: border-box;
-        height: auto;
+        margin-top: 20vw;
+        padding-left: 7vw;
+        padding-right: 7vw;
         width: 100%;
+        min-height: auto;
     }
-    ul .list_item {
+    .list_item {
         position: relative;
         top: auto !important;
         left: auto !important;
         width: 100%;
-        margin-bottom: 47px;
+        margin-bottom: 12vw;
     }
     .list_item>a {
         display:flex;
@@ -239,59 +238,68 @@
         display:none;
     }
     .list_thumb {
-        width: 137px;
+        width: 35vw;
     }
     .list_title {
-        font-size:16px;
-        padding-left:16px;
+        width: 51vw;
+        font-size: 4vw;
+        padding-left: 4vw;
+        height: 100%;
+        padding-top: 0;
+        font-weight: 400;
     }
 
     /* About */
     .about {
-        margin-top:60px;
-        padding-left:28px;
-        padding-right:28px;
-        padding-top:40px;
+        margin-top: 60px;
+        padding-top: 40px;
         width: 100%;
+        padding-left: 7vw;
+        padding-right: 7vw;
     }
     .about_position {
-        font-size:13px;
+        font-size:3.2vw;
         letter-spacing:9px;
     }
     .about_name {
-        font-size:31px;
-        letter-spacing:13px;
-        margin-top:16px;
+        font-size: 7vw;
+        letter-spacing: 0.57em;
+        margin-top: 4vw;
     }
     .about_from {
-        margin-top:16px;
-        font-size:14px;
+        margin-top: 4vw;
+        font-size: 3.2vw;
+        letter-spacing: .05em;
     }
     .about_description {
-        margin-top:32px;
-        font-size:14px;
-        line-height:1.6;
-        letter-spacing:3px;
+        margin-top: 8vw;
+        font-size: 3.2vw;
+        letter-spacing: .05em;
+        line-height: 1.6;
+        font-weight: 300;
     }
     .about_contact {
         display: none;
     }
     .about_sns {
-        margin-top: 32px;
-        position:relative;
-        font-size:13px;
-        letter-spacing:2px;
+        margin-top: 8vw;
+        font-size: 3.2vw;
         display: block;
+        font-weight: 600;
+        letter-spacing: .05em;
+        position:relative;
     }
     .about_sns_fb, .about_sns_gh {
         color:white;
+        width: 27vw;
         text-decoration: none;
+        display: block;
     }
     .about_sns_arrow {
         position: absolute;
         top: 0;
-        width: 24px;
-        left: 65px;
+        width: 6.1vw;
+        left: 14vw;
     }
     .about_sns_arrow>svg {
         fill: #fff;
@@ -299,16 +307,16 @@
     .about_sns_gh{
         position: absolute;
         top: 0;
-        left: 126px;
+        left: 27vw;
     }
     .about_sns_gh>.about_sns_arrow {
-        left: 50px;
+        left: 9.5vw;
     }
     .about_contact_email {
         display: block;
-        margin-top: 32px;
-        font-size:13px;
-        letter-spacing:3px;
+        margin-top: 8vw;
+        font-size: 3.2vw;
+        letter-spacing: .05em;
     }
     .about_contact_email_link {
         text-decoration: none;
