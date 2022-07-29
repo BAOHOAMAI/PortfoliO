@@ -66,8 +66,7 @@ const animationAboutEnter = (container) => {
             tl
                 .fromTo( images, {y:-401}, {y:0, stagger:.1},0)
                 .fromTo( aboutNums, {x:-401}, {x:0,stagger:.1},.5)
-                .fromTo( abouTitles, {x:-401}, {x:0,stagger:.1},.5)
-                .fromTo( abouTitles, {x:-401}, {x:0,stagger:.1},.5)
+                .fromTo( abouTitles, {x:-401 , opacity:0}, {x:0,stagger:.1,opacity:1},.5)
                 .fromTo('.menuTrigger_close>span', { scale:0 }, { scale:1 , stagger:.25 },1.3)
 
         return tl ;
