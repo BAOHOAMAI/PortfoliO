@@ -16,8 +16,8 @@ tl
     .fromTo('.header-home', { x:-40 , opacity:0 }, { x:0, opacity:1 , duration:.7 },4.3)
     .fromTo('.header-about-container>span', { x:-40 , opacity:0 }, { x:0, opacity:1 , stagger:.1 , duration:.7 },4.4)
     .fromTo('.contact>a', { x:-40 , opacity:0 }, { x:0, opacity:1 , stagger:.1 , duration:.5 },4.4)
-    // .fromTo('.slideNavi-next', { x:-200 , opacity:0 }, { duration:1 , x:0 , opacity:1 , ease: 'Expo.easeInOut' } ,3.2)
-    // .fromTo('.slideNavi-prev', { x:200 , opacity:0 }, { duration:1 , x:0 , opacity:1 , ease: 'Expo.easeInOut' },3.2)
+    .fromTo('.slideNavi-next', { x:-200 , opacity:0 }, { duration:1 , x:0 , opacity:1 , ease: 'Expo.easeInOut' } ,3.2)
+    .fromTo('.slideNavi-prev', { x:200 , opacity:0 }, { duration:1 , x:0 , opacity:1 , ease: 'Expo.easeInOut' },3.2)
     .fromTo ('.slideHome-container>span' , {y: 100 , opacity:0 } ,{ duration: 1.5 , y:0 , opacity:1 ,stagger:.2 , ease:'Expo.easeInOut' },3)
     .fromTo ('video', { opacity:0 }, { opacity:1 },3.3)
 
@@ -37,10 +37,8 @@ const TransitionEnter = (container) => {
     const tl = gsap.timeline();
 
     tl.from (container, { autoAlpha:0 , duration:.6 , translateX: '-100%' , opacity:0 })
-    //   .fromTo('.slideNavi-next', { x:-200 , opacity:0 }, { duration:1 , delay:.3 , x:0 , opacity:1 , ease: 'Expo.easeInOut' } ,0)
-    //   .fromTo('.slideNavi-prev', { x:200 , opacity:0 }, { duration:1 , delay:.3 , x:0 , opacity:1 , ease: 'Expo.easeInOut' },0)
-
-
+      .fromTo('.slideNavi-next', { x:-200 , opacity:0 }, { duration:1 , delay:.3 , x:0 , opacity:1 , ease: 'Expo.easeInOut' } ,0)
+      .fromTo('.slideNavi-prev', { x:200 , opacity:0 }, { duration:1 , delay:.3 , x:0 , opacity:1 , ease: 'Expo.easeInOut' },0)
 };
 
 const animationEnter = (container) => {

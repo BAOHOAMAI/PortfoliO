@@ -10,7 +10,6 @@
         margin-left: 4vw;
     }
     .slideHome-name {
-        /* margin-top: 4vw; */
         font-size: 8vw;
         letter-spacing: .8em;
         text-align: center;
@@ -137,10 +136,6 @@
         width: 13px;
         height: 13px;
     }
-    .slideWorks_tech, .slideWorks_description {
-        display: none;
-    }
-
     /* List */
     .list {
         margin-top: 20vw;
@@ -155,21 +150,6 @@
         left: auto !important;
         width: 100%;
         margin-bottom: 12vw;
-    }
-    .list_item>a {
-        display:flex;
-        align-items: center;
-        flex-direction: row;    
-    }
-    .list_item>a:hover .list_num>span , .list_item>a:hover .list_title>span,.list_item>a:hover .list_thumb>img{
-        transition: none;
-        transform: none;
-    }
-    .list_num {
-        display:none;
-    }
-    .list_thumb {
-        width: 35vw;
     }
     .list_title {
         width: 51vw;
@@ -209,9 +189,6 @@
         line-height: 1.6;
         font-weight: 300;
     }
-    .about_contact {
-        display: none;
-    }
     .about_sns {
         margin-top: 8vw;
         font-size: 3.2vw;
@@ -231,9 +208,6 @@
         top: 0;
         width: 6.1vw;
         left: 14vw;
-    }
-    .about_sns_arrow>svg {
-        fill: #fff;
     }
     .about_sns_gh{
         position: absolute;
@@ -342,9 +316,6 @@
         width: 13px;
         height: 13px;
     }
-    .slideWorks_tech, .slideWorks_description {
-        display: none;
-    }
      /* List */
      .list {
         margin-top: 150px;
@@ -360,21 +331,6 @@
         width: 100%;
         margin-bottom: 12vw;
     }
-    .list_item>a {
-        display:flex;
-        align-items: center;
-        flex-direction: row;    
-    }
-    .list_item>a:hover .list_num>span , .list_item>a:hover .list_title>span,.list_item>a:hover .list_thumb>img{
-        transition: none;
-        transform: none;
-    }
-    .list_num {
-        display:none;
-    }
-    .list_thumb {
-        width: 35vw;
-    }
     .list_title {
         width: 45vw;
         font-size: 20px;
@@ -383,7 +339,38 @@
         padding-top: 0;
         font-weight: 400;
     }
+    /* slideInfo */
 
+    .slideInfo_header {
+        margin-top:10vw;
+    }
+    .slideInfo_header:before {
+        top: -0.45vw;
+        left: 8.8vw;
+        height: 4.1vw;
+    }
+    .slideInfo_header-num {
+        font-size:3vw;
+    }
+    .slideInfo_header-category {
+        left: 10.9vw;
+        font-size: 3vw;
+    }
+    .slideInfo_title {
+        margin-top: 1.875vw;
+        font-size: 5.625vw;
+    }
+    .slideInfo_description {
+        margin-top: 3.375vw;
+        font-size: 2.25vw;
+    }
+    .slideInfo_tech {
+        margin-top: 9vw;
+        font-size: 2.25vw;
+    }
+    .slideInfo_tech-icon>span {
+        line-height:5vw;
+    }
     /* About */
     .about {
         margin-top: 60px;
@@ -411,9 +398,6 @@
         line-height: 1.9;
         font-weight: 300;
     }
-    .about_contact {
-        display: none;
-    }
     .about_sns {
         margin-top: 40px;
         font-size: 20px;
@@ -433,9 +417,6 @@
         top: 0;
         width: 6.1vw;
         left: 11vw;
-    }
-    .about_sns_arrow>svg {
-        fill: #fff;
     }
     .about_sns_gh{
         position: absolute;
@@ -539,6 +520,30 @@
     .slideWorks_visit:before {
         display: none;
     } 
+    .slideWorks_tech, .slideWorks_description {
+        display: none;
+    }
+    .list_item>a {
+        display:flex;
+        align-items: center;
+        flex-direction: row;    
+    }
+    .list_item>a:hover .list_num>span , .list_item>a:hover .list_title>span,.list_item>a:hover .list_thumb>img{
+        transition: none;
+        transform: none;
+    }
+    .list_num {
+        display:none;
+    }
+    .list_thumb {
+        width: 35vw;
+    }
+    .about_sns_arrow>svg {
+        fill: #fff;
+    }
+    .about_contact {
+        display: none;
+    }
     footer {
         display: none;
     }

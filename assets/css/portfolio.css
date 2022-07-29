@@ -54,7 +54,7 @@ body::-webkit-scrollbar-thumb:hover {
     display: block;
     font-size: 14px;
     font-weight: 500;
-    letter-spacing: .3em;
+    letter-spacing: 4.2px;
     overflow: hidden;
     text-decoration: none;
     color: white;
@@ -86,7 +86,7 @@ body::-webkit-scrollbar-thumb:hover {
     width: 97px;
     margin-top: 8px;
     font-size: 14px;
-    letter-spacing: .2em;
+    letter-spacing: 3px;
     font-weight: 600;
 }
 .header-about-text {
@@ -129,7 +129,7 @@ body::-webkit-scrollbar-thumb:hover {
     display: inline-block;
     position: relative;
     font-size: 14px;
-    letter-spacing: .2em;
+    letter-spacing: 3px;
     text-decoration: none;
     font-weight: 600;
     color: white;
@@ -164,13 +164,13 @@ main {
     display: block;
     font-weight: 600;
     font-size: 24px;
-    letter-spacing: .6em;
+    letter-spacing: 15px;
 }
 .slideHome-name {
     display: block;
     margin-top: 30px;
     font-size: 50px;
-    letter-spacing: 1.135em;
+    letter-spacing: 57px;
     white-space: nowrap;
     font-weight: 500;
 }
@@ -180,7 +180,7 @@ main {
     margin-bottom: 15px;
     text-align: right;
     font-size: 15px;
-    letter-spacing: .25em;
+    letter-spacing: 4px;
     font-weight: 300;
 }
 .slideHome-from>br , .slideHome-name>br {
@@ -216,7 +216,7 @@ main {
 }
 .slideWorks_num {
     font-size: 22px;
-    letter-spacing: .1em;
+    letter-spacing: 2px;
     /* position: relative; */
 }
 .slashes:before {
@@ -235,13 +235,13 @@ main {
     top: 0;
     left: 80px;
     font-size: 21px;
-    letter-spacing: .2em;
+    letter-spacing: 4px;
     pointer-events: none;
 }
 .slideWorks_title {
     margin-top: 20px;
     font-size: 45px;
-    letter-spacing: .05em;
+    letter-spacing: 3px;
     font-weight: 400;
     line-height: 1.25;
     box-sizing: border-box;
@@ -252,7 +252,7 @@ main {
 .slideWorks_description {
     margin-top: 20px;
     font-size: 15px;
-    letter-spacing: .1em;
+    letter-spacing: 2px;
     line-height: 1.9;
     width: 720px;
     transition: none;
@@ -262,7 +262,7 @@ main {
     position: relative;
     margin-top: 25px;
     font-size: 16px;
-    letter-spacing: .2em;
+    letter-spacing: 3px;
     font-weight: 400;
     color: #fff;
 }
@@ -285,9 +285,7 @@ main {
     animation:slideWorks_sns_hover .4s cubic-bezier(.175,.885,.32,1.275) 0s
 }
 @keyframes slideWorks_sns_hover{
-    0%{transform:none}
-    20%{transform:scale(.33)}
-    100%{transform:none}
+    0%{transform:none}20%{transform:scale(.33)}100%{transform:none}
 }
 .slideWorks_visit {
     position: absolute;
@@ -317,7 +315,7 @@ main {
     position: absolute;
     top: 75px;
     font-size: 23px;
-    letter-spacing: 0.1em;
+    letter-spacing: 2px;
     color: black;
     transform: translateX(-10px);
     right: 43px;
@@ -367,7 +365,7 @@ main {
     text-decoration: none;
     font-size: 18px;
     font-style: italic;
-    letter-spacing: .075em;
+    letter-spacing: 1px;
 
 }
 .slideNavi-prev {
@@ -431,7 +429,6 @@ main {
 @keyframes slideNavi_next_arrow{
     0%{opacity:1;transform:none}20%{opacity:0;transform:translateX(-100%)}100%{opacity:1;transform:none}
 }
-
 /* Slide Info */
 .slideInfo {
     position: fixed;
@@ -533,6 +530,7 @@ main {
     font-size: 4vw;
     line-height: 6vw;
 }
+
 /* MenuTrigger */
 .menuTrigger{
     position:fixed;
@@ -588,38 +586,10 @@ main {
     animation:menuTrigger_hoverX .4s cubic-bezier(.645,.045,.175,1) .2s
 }
 @keyframes menuTrigger_hoverX{
-    0%
-    {
-        transform-origin:100% 0;transform:none
-    }
-    45%
-    {
-    transform-origin:100% 0;transform:scaleX(0)
-    }
-    55%{
-        transform-origin:0 0;transform:scaleX(0)
-    }
-    100%{
-        transform-origin:0 0;transform:none
-    }
+    0%{transform-origin:100% 0;transform:none}45%{transform-origin:100% 0;transform:scaleX(0)}55%{transform-origin:0 0;transform:scaleX(0)}100%{transform-origin:0 0;transform:none}
 }
 @keyframes menuTrigger_hoverY{
-    0%
-    {
-        transform-origin:0 100%;transform:none
-    }
-    45%
-    {
-        transform-origin:0 100%;transform:scaleY(0)
-    }
-    55%
-    {
-        transform-origin:0 0;transform:scaleY(0)
-    }
-    100%
-    {
-        transform-origin:0 0;transform:none
-    }
+    0%{transform-origin:0 100%;transform:none}45%{transform-origin:0 100%;transform:scaleY(0)}55%{transform-origin:0 0;transform:scaleY(0)}100%{transform-origin:0 0;transform:none}
 }
 /* Menu Close */
 .menuTrigger_close {
@@ -756,11 +726,6 @@ main {
     height:100%;
 }
 /*ABOUT */
-body {
-    height: 100%;
-    width: 100%;
-    /* overflow: hidden; */
-}
 .about_sns {
     display: none;
 }
@@ -867,14 +832,9 @@ body {
     animation-iteration-count: infinite;
     animation-name: arrow;
 }
-  
 @keyframes arrow{
-    0%
-      {opacity: 1}
-    100%
-      {opacity: 0;transform: translate(-10px, -10px)}
+    0%{opacity: 1}100%{opacity: 0;transform: translate(-10px, -10px)}
 }
-
 /* Modal Contact */
 
 .modal {
@@ -1222,14 +1182,7 @@ textarea::-webkit-scrollbar {
     animation: scaleMessage .4s ease-in-out;
 }
 @keyframes scaleMessage {
-    from { 
-        opacity: 0;
-        transform: scale(0);
-    }
-    to {
-         opacity: 1;
-         transform: scale(1);
-    }
+    from {opacity: 0;transform: scale(0);}to {opacity: 1;transform: scale(1);}
 }
 /* Loading */
 .loading{
