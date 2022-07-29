@@ -47,23 +47,9 @@
     }
 
     /* Loading */
-
-    .loading_name {
-        font-size:18px;
-        letter-spacing:6px;
-        font-weight:100;
-        margin-bottom:60px;
-        left: 30%;
-    }
-    .sub_loading {
-        left: 34%;
-        font-size:9px;
-        margin-top:50px
-    }
     .loading_bar {
         width: 250px;
-        top: 52%;
-        left: 21%;
+        left: calc(50% - 110px);
     }
     .loader {
         width: 250px;
@@ -439,6 +425,12 @@
         margin-top:5px;
         display: inline-block;
         margin-bottom:50px;
+    }
+    .sub_loading {
+        top: 48%;
+    }
+    .loading_bar {
+        top: 51%;
     }
 }
 
